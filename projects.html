@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Data Projects | Rahul Shukla</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="projects">
+  <div class="container">
+    <header>
+      <nav>
+        <a href="index.html" class="brand">Rahul Shukla</a>  
+        <ul>
+          <li><a href="blog.html">blog</a></li>
+          <li><a href="projects.html" class="active">data projects</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>data projects</h1>
+      <div class="grid cards">
+        
+        <!-- Project 1 -->
+        <article class="card">
+          <h3>bharatIndustryR</h3>
+          <p>
+            An <strong>R package</strong> that harmonises India’s 
+            <em>Annual Survey of Industries (ASI)</em> and 
+            <em>Annual Survey of Unincorporated Sector Enterprises (ASUSE)</em> 
+            into a clean, research-ready format.  
+          </p>
+          <p>
+            It provides functions to compute industrial cluster metrics 
+            (LQ, HHI, productivity), compare formal vs informal enterprises, 
+            and generate <code>district × industry × year</code> panels.  
+          </p>
+          <p>
+            The package includes tools for cleaning, aggregation, deflation, 
+            and mapping, enabling researchers to explore India’s industrial 
+            structure at multiple levels.
+          </p>
+          <p>
+            <a href="https://github.com/your-handle/bharatIndustryR" target="_blank" rel="noopener">GitHub Repository</a>
+          </p>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="card">
+          <h3>BharatViz</h3>
+          <p>
+            An <strong>interactive Shiny dashboard</strong> that integrates 
+            industrial clusters (ASI/ASUSE), labour market inequality and 
+            migration (PLFS), and socio-economic deprivation 
+            (SECC/NFHS/Census) into one platform.  
+          </p>
+          <p>
+            Users can explore heatmaps, graphs, and bivariate maps, 
+            interactively overlay datasets, and identify patterns such as:  
+            <em>“Do industrial clusters coincide with deprived districts?”</em> or  
+            <em>“Which industries should a district diversify into next?”</em>
+          </p>
+          <p>
+            The dashboard also features trajectory classification, 
+            diversification recommendations, and night-lights validation.
+          </p>
+          <p>
+            <a href="https://your-shinyapp-link" target="_blank" rel="noopener">Launch Dashboard</a>
+          </p>
+        </article>
+        
+      </div>
+    </main>
+  </div>
+  <script src="include.js"></script>
+</body>
+</html>

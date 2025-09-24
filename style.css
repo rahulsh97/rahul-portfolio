@@ -1,0 +1,225 @@
+/* Base */
+/* body {
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #ddd;
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+} */
+
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fafafa;
+  color: #222;
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+}
+
+/* Single-column layout + consistent spacing on every page */
+main, .intro {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 20px 64px;
+}
+
+/* Header / Nav (compact) */
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 16px;            /* tighter gap */
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  color: #0066cc;
+  text-decoration: none;
+  padding: 4px 0;       /* slimmer link hit area */
+}
+nav a.active {
+  border-bottom: 2px solid #0066cc;
+}
+
+/* Brand in navbar */
+nav .brand {
+  /* color: #ddd; */
+  color: #222;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+  padding: 4px 0;          /* keeps baseline aligned with menu links */
+  margin-right: auto;      /* pushes menu to the right */
+  display: inline-block;
+  line-height: 1;          /* avoids looking “off” vertically */
+  font-size: 18px;
+}
+
+/* Social icons row */
+.social-icons {
+  display: flex;
+  gap: 14px;
+  margin: 8px 0 2px;
+}
+.social-icons a {
+  color: #0066cc;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+}
+.social-icons a svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+.social-icons a:hover { color: #004999; opacity: 0.85; }
+
+nav .brand:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+
+/* Typography rhythm */
+p { margin: 0 0 12px; }
+h1, h2, h3 { margin: 16px 0 8px; line-height: 1.3; }
+
+/* Intro (photo + text, left-aligned like the reference) */
+.intro {
+  text-align: left;     /* was center */
+  padding-top: 16px;    /* smaller top space */
+}
+.profile-pic {
+  border-radius: 50%;
+  width: 200px;          /* a bit smaller */
+  height: 200px;
+  object-fit: cover;
+  border: 1px solid #2a2a2a;
+  margin: 0 0 12px 0;
+}
+
+/* Blog list */
+.blog-list {
+  max-width: 660px;     /* same column width */
+  margin: 0 auto;
+  padding: 0 20px 24px;
+}
+
+.blog-list li {
+  list-style: none;
+  margin: 12px 0;
+  padding: 16px 20px;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.blog-list li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+/* .blog-list li {
+  margin: 0;
+  padding: 10px 0;
+  border-bottom: 1px dashed rgba(255,255,255,0.12);
+} */
+/* 
+.blog-list {
+  max-width: 660px;
+  margin: 0 auto;
+  padding: 0 20px 24px;
+  list-style: none;
+} */
+
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 16px;
+  margin: 12px 0;
+  transition: box-shadow .2s ease, transform .2s ease;
+}
+
+
+
+/* Optional: two columns for cards on wide screens */
+@media (min-width: 900px) {
+  .cards-two-col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+.grid.cards .card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 16px;
+  margin: 12px 0;
+  transition: box-shadow .2s ease, transform .2s ease, border-color .2s ease;
+}
+.grid.cards .card:hover {
+  background-color: #f9f9f9;
+  border-color: rgba(0,102,204,0.3);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+  transform: translateY(-3px);
+}
+.grid.cards .card a {
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: 500;
+}
+.grid.cards .card a:hover {
+  color: #004999;
+  text-decoration: underline;
+}
+
+/* Focus-visible for accessibility (keyboard users) */
+.grid.cards .card:focus-within{
+  outline: 2px solid rgba(124,196,255,0.6);
+  outline-offset: 2px;
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce){
+  .grid.cards .card{ transition: none; }
+  .grid.cards .card a{ transition: none; }
+}
+
+
+main h1, main h2 {
+  color: #333;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 6px;
+}
+
+
+/* Blog links */
+.blog-list a {
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color .2s ease, text-shadow .2s ease;
+}
+.blog-list a:hover {
+  color: #004999;
+  text-decoration: underline;
+}
+
+
