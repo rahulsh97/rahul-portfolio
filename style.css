@@ -89,6 +89,9 @@ nav .brand {
   fill: currentColor;
 }
 .social-icons a:hover { color: #004999; opacity: 0.85; }
+.social-icons {
+  margin-bottom: 2rem; /* adjust spacing */
+}
 
 nav .brand:hover { text-decoration: underline; text-underline-offset: 3px; }
 
@@ -221,5 +224,6 @@ main h1, main h2 {
   color: #004999;
   text-decoration: underline;
 }
+
 
 
